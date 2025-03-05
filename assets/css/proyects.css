@@ -1,0 +1,134 @@
+.layout--proyects{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: linear-gradient(var(--fondo), var(--fondo2));
+  flex-direction: column;
+}
+
+.layout__nav--proyects{
+  width: 100%;
+  height:7%;
+  background-color: var(--fondo);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 1px solid #08A117;
+  padding-bottom: 1rem;
+}
+
+
+.layout__main--proyects{
+  width: 100%;
+  height: 76%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.main__content--proyects{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout__footer--proyects{
+  width: 100%;
+  height: 10%;
+  background: var(--fondo);
+  position: relative;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.content__articles--proyects{
+  width: 100%;
+  height: 40%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.content__description--proyects{
+  width: 97%;
+  height: 20%;
+  margin-top: 40rem;
+  background: #08A11730;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 2px solid #6BCF7530;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 0 8px var(--text);
+  transition: all 300ms linear;
+  display: flex;
+  align-items: center;
+}
+.content__description--proyects > p{
+  color: var(--text);
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: 500;
+}
+
+.articles__proyect{
+  display: flex;
+  width: 45%;
+  height: 90%;
+  margin: 1rem;
+  background: #08A11730;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 2px solid #6BCF7530;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 0 8px var(--text);
+  transition: all 300ms linear;
+}
+.articles__proyect--reverse{
+  flex-direction: row-reverse;
+}
+
+.proyect__content{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+}
+.proyect__content > h2{
+  color: var(--text);
+  text-align: center;
+  letter-spacing: .1rem;
+}
+.proyect__content > p{
+  color: var(--text);
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.proyect__img{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.proyect__img > a{
+  height: 50%;
+  width: 100%;
+}
+
+.proyect__img > a > img{
+  width: 30rem;
+  border-radius: 10px;
+}
