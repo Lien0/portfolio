@@ -413,17 +413,17 @@ body{
 }
 .slider__list{
   height: 100%;
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: end;
 }
 
 .slider__list > li {
-  height: 80%;
+  height: 70%;
   list-style: none;
   display: flex;
-  align-items: center;
+  align-items: start;
   padding: 2rem;
 }
 .slider__list > li > a{
@@ -597,7 +597,7 @@ body{
     height: 1%;
     background-color: var(--fondo);
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     overflow: hidden;
     border-bottom: 1px solid #08A117;
   }
@@ -647,7 +647,7 @@ body{
   .header__description{
     width: 90%;
     height: 100%;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     display: flex;
     justify-content: baseline;
     align-items: center;

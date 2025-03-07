@@ -108,18 +108,18 @@ function media() {
     slider.style.display = "flex";
   } else {
     nav.innerHTML = `
-    <div class="nav__logo">
-          <img src="/assets/icons/liera-icon.jpg" alt="logo" />
-        </div>
-        <div class="nav__items">
-          <ul class="items__list">
-            <li><a href="#">Informacion</a></li>
-            <li><a href="/assets/pages/proyects.html">Proyectos</a></li>
-            <li>
-              <a href="/assets/pages/colaborations.html">Colaboraciones</a>
-            </li>
-          </ul>
-        </div>
+      <div class="nav__logo">
+            <img src="/assets/icons/liera-icon.jpg" alt="logo" />
+          </div>
+          <div class="nav__items">
+            <ul class="items__list">
+              <li><a href="#">Informacion</a></li>
+              <li><a href="/assets/pages/proyects.html">Proyectos</a></li>
+              <li>
+                <a href="/assets/pages/colaborations.html">Colaboraciones</a>
+              </li>
+            </ul>
+      </div>
     `;
     slider.style.display = "none";
   }

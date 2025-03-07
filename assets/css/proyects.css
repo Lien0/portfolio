@@ -503,7 +503,7 @@ justify-content: center;
   .content__description--proyects > p{
     width: 100%;
     color: var(--text);
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: justify;
     font-weight: 500;
   }
@@ -543,7 +543,7 @@ justify-content: center;
     color: var(--text);
     margin-top: 1rem;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
   .proyect__img{
