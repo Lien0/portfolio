@@ -101,16 +101,18 @@ function media() {
   let nav = document.querySelector(".layout__nav");
   let slider = document.querySelector(".slider");
 
-  let sc = screen.width;
-  if (sc < 831) {
+  let sc = window.innerWidth;
+  if (sc < 700) {
     nav.innerHTML =
       '<i class="fa-solid fa-bars nav__slider" onClick = "showSlideBar()"></i>';
     slider.style.display = "flex";
   } else {
     nav.innerHTML = `
       <div class="nav__logo">
+          <a href="/">
             <img src="/assets/icons/liera-icon.jpg" alt="logo" />
-          </div>
+          </a>
+        </div>
           <div class="nav__items">
             <ul class="items__list">
               <li><a href="#">Informacion</a></li>

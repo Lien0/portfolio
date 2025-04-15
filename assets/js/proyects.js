@@ -35,6 +35,14 @@ window.addEventListener("DOMContentLoaded", () => {
       url: "https://lanostalgiadelfutbol.web.app/",
       extraClass: "articles__proyect--reverse",
     },
+    {
+      title: "Proyecto 5, React",
+      description:
+        "Este proyecto fue realizado con React y Next.Js, es un proyecto e-commerce en el cual se muestran algunos articulos para mastocas, tiene un carrito de compra el cual interactua con la memoria local, tiene una paginacion y un buscador de artículos. ",
+      img: "../img/proyecto5.jpg",
+      url: "https://e-commerce-project-c8d29xb6t-enrique-lieras-projects.vercel.app/",
+      extraClass: "",
+    },
   ];
   let proyectsContent = "";
 
@@ -64,20 +72,21 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 function media() {
   let nav = document.querySelector(".layout__nav--proyects");
   let slider = document.querySelector(".slider__proyects");
 
-  let sc = screen.width;
-  if (sc < 831) {
+  let sc = window.innerWidth;
+  if (sc < 1001) {
     nav.innerHTML =
       '<i class="fa-solid fa-bars nav__slider" onClick = "showSlideBar()"></i>';
     slider.style.display = "flex";
   } else {
     nav.innerHTML = `
       <div class="nav__logo">
-          <img src="/assets/icons/liera-icon.jpg" alt="logo" />
+          <a href="/">
+            <img src="/assets/icons/liera-icon.jpg" alt="logo" />
+          </a>
         </div>
         <div class="nav__items">
           <ul class="items__list">
@@ -98,8 +107,7 @@ function showSlideBar() {
 
   if (slider.style.transform == "") {
     slider.style.transform = "translateX(80rem)";
-  }
-  else{
+  } else {
     slider.style.transform = "";
   }
 }

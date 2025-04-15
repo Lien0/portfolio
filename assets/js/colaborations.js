@@ -17,15 +17,17 @@ function media() {
   let nav = document.querySelector(".layout__nav--colaborations");
   let slider = document.querySelector(".slider__colaborations");
 
-  let sc = screen.width;
-  if (sc < 831) {
+  let sc = window.innerWidth;
+  if (sc < 700) {
     nav.innerHTML =
       '<i class="fa-solid fa-bars nav__slider" onClick = "showSlideBar()"></i>';
     slider.style.display = "flex";
   } else {
     nav.innerHTML = `
       <div class="nav__logo">
-          <img src="/assets/icons/liera-icon.jpg" alt="logo" />
+          <a href="/">
+            <img src="/assets/icons/liera-icon.jpg" alt="logo" />
+          </a>
         </div>
         <div class="nav__items">
           <ul class="items__list">
