@@ -277,6 +277,13 @@ body{
   margin-bottom: 1rem;
   font-weight: 500;
 }
+.box__abilities > ul>li>span>a{
+  color: var(--text);
+  text-decoration: underline;
+}
+
+
+
 .box__footer{
   color: var(--text);
   padding: 1rem;

@@ -43,6 +43,20 @@ window.addEventListener("DOMContentLoaded", () => {
       url: "https://e-commerce-project-c8d29xb6t-enrique-lieras-projects.vercel.app/",
       extraClass: "",
     },
+    {
+      title: "Proyecto 6, React",
+      description: `Este proyecto fue realizado con React, Next.Js, tailwind, 
+      es una app web realizada para Diaro, está realizada con el objetivo de llegar 
+      a más 
+      público, cuenta con secciones para la descripción de sus servicios, así como 
+      de sus colaboradores, está optimizada para ser ligera de cargar para diferentes
+      dispositivos, cuenta con un buzón de cotizaciones para el uso exclusivo
+      del contratista, con ciberseguridad para su acceso a su cuenta personal y
+      el cuidado de su información en base de datos.`,
+      img: "../img/proyecto6.jpg",
+      url: "https://diarol.com.mx/",
+      extraClass: "articles__proyect--reverse",
+    },
   ];
   let proyectsContent = "";
 

@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
       title: "Habilidades:",
       description:
         "<p>Actualmente cuento con habilidades avanzadas y básicas de programación, la mayoria enfocadas en el desarrollo web pero próximamente añadiré más.</p>",
-      list: "<li>JavaScript - Intermedio</li> <li>Java - Básico</li> <li>SQL - Básico</li> <li>HTML - Avanzado</li> <li>CSS - Intermedio</li> <li>Angular - Básico</li> <li>React - Básico</li>",
+      list: "<li>JavaScript - Intermedio</li> <li>Java - Básico</li> <li>SQL - Básico</li> <li>HTML - Avanzado</li> <li>CSS - Intermedio</li> <li>Angular - Básico</li> <li>React - Intermedio</li> <li>NextJs - Intermedio</li> <li>Tailwind - Intermedio</li>",
       footer: "Pd. Esta página es 100% mi creación.",
     },
     {
@@ -20,9 +20,9 @@ window.addEventListener("DOMContentLoaded", () => {
     {
       title: "Trayectoria Laboral:",
       description: "",
-      list: "<li>Detallador automotriz en Pintura y Hojalateria Automotriz Liera.</li> <li>Auditor de campo en Encuesta MX.</li> <li>Gerente de sucursal en Soleman.</li>  <li>Supervisor de Mesas en Caliente Casino.</li>",
+      list: "<li>Detallador automotriz en Pintura y Hojalateria Automotriz Liera.</li> <li>Auditor de campo en Encuesta MX.</li> <li>Gerente de sucursal en Soleman.</li>  <li>Supervisor de Mesas en Caliente Casino.</li> <li>Piloto de Robots en Remotics.</li> <li>Freelancer en Desarrollo de aplicaciones web con <span><a href='https://diarol.com.mx' target='_blank' >Diarol MX</a></span>.</li>",
       footer:
-        "Estos empleos no han sido relacionados a mi área profesional pero cada uno me ha dado habilidades y caracter para poder seguir mis sueños.",
+        "La mayoría de mis empleos no han sido relacionados a mi área profesional pero cada uno me ha dado habilidades y caracter para poder seguir mis sueños.",
     },
   ];
   let boxesContainer = document.querySelector(".content__boxes");
@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "",
-      text: "Soy un hombre felizmente casado intento realizar colaboraciones con mi esposa ya que ella tiene como meta el desarrollo gráfico de videojuegos, es una mujer que admiro y me impulsa a seguir mis sueños así como mis ambiciones, tengo una hija maravillosa a la cual me gustaria dar un futuro prometedor todos los dias la tengo en mis pensamientos, me hace más fuerte por lo que no sedo ni me rindo para nada facil.",
+      text: "Soy un hombre felizmente casado intento realizar colaboraciones con mi esposa ya que ella tiene como meta el desarrollo gráfico de videojuegos, es una mujer que admiro y me impulsa a seguir mis sueños así como mis ambiciones, tengo una hija maravillosa a la cual me gustaria dar un futuro prometedor todos los dias la tengo en mis pensamientos, me hace más fuerte por lo que no sedo ni me rindo en ningún momento.",
     },
   ];
   let articlesContainer = document.querySelector(".content__articles");
