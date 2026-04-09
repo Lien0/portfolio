@@ -1,443 +1,133 @@
-:root{
-  --fondo: #0B120B;
-  --text: #08A117;
-}
+@import url("./variables.css");
 
-*{
+* {
   margin: 0;
   padding: 0;
-  vertical-align: baseline;
-}
-
-*,
-*::before,
-*::after{
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
 }
 
 html {
-  font-size: 10px;
+  font-size: var(--font-size-base);
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 1.6rem;
-  background-color: var(--fondo);
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loader__animation {
+  font-size: var(--loader-font-size);
+  color: var(--color-text-primary);
+  animation: bounce-loader var(--loader-animation-speed) ease-in-out infinite;
 }
 
 .layout {
   position: absolute;
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .layout__main {
-  width: 60%;
+  width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding: var(--spacing-md);
+  gap: 4rem;
 }
-
 
 .main__title {
   width: 100%;
-  height: 20%;
   text-align: center;
-  color: var(--text);
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-sm);
   text-transform: uppercase;
+}
+
+.main__title h1 {
+  font-size: var(--font-size-lg);
 }
 
 .main__description {
   width: 100%;
-  height: 20%;
   text-align: center;
-  color: var(--text);
-  font-size: 2rem;
-  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+}
+
+.main__description p {
+  font-size: var(--font-size-md);
+  line-height: 1.5;
 }
 
 .main__button {
   width: 100%;
-  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .main__button > a {
-  width: 16rem;
-  height: 16rem;
-  border: 6px solid white;
-  background-color: black;
-  padding: 2rem;
-  border-radius: 100%;
+  width: 12rem;
+  height: 12rem;
+  border: 4px solid var(--color-text-secondary);
+  background-color: var(--color-bg-secondary);
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 300ms ease-in-out;
+  transition: var(--transition-fast);
+  overflow: hidden;
 }
-.main__button > a:hover{
+
+.main__button > a:hover {
   transform: scale(1.1);
-  border: 6px solid var(--text);
+  border-color: var(--color-text-primary);
+  box-shadow: var(--shadow-glow);
 }
 
 .main__button > a > img {
-  width: 13rem;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
 }
 
-
-
-
-/*////////////////////////////////////////////////////////////////////////////////*/
-@media (orientation:portrait) and (max-width: 500px) {
-  html {
-    font-size: 10px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    background-color: var(--fondo);
-  }
-
-  .layout {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
+/* Tablet and Desktop adjustments */
+@media (min-width: 768px) {
   .layout__main {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
   }
-  
-  
-  .main__title {
-    height: 20%;
-    width: 100%;
-    color: var(--text);
-    font-size: 2rem;
-    margin-bottom: 1rem;
+
+  .main__title h1 {
+    font-size: var(--font-size-xl);
   }
-  
-  .main__description {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    color: var(--text);
-    font-size: 2rem;
-    padding: .5rem;
-    margin-left: .5rem;
-    margin-right: .5rem;
-    display: flex;
-    justify-content: center;
-  }
-  .main__description > p{
-    width: 90%;
-    height: 100%;
-    text-align: center;
-    margin: 1rem;
-  } 
-  
-  .main__button {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+
   .main__button > a {
-    width: 10rem;
-    height: 10rem;
-    border: 6px solid white;
-    background-color: black;
-    padding: 1rem;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 300ms ease-in-out;
-  }
-  .main__button > a:hover{
-    transform: scale(1.1);
-    border: 6px solid var(--text);
-  }
-  
-  .main__button > a > img {
-    width: 8rem;
+    width: 14rem;
+    height: 14rem;
   }
 }
 
-
-/*////////////////////////////////////////////////////////////////////////////////*/
-@media (max-width: 1000px) and (orientation:landscape) {
-  html {
-    font-size: 10px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    background-color: var(--fondo);
-  }
-
-  .layout {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
+@media (min-width: 1024px) {
   .layout__main {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .main__title {
-    height: 20%;
-    width: 100%;
-    color: var(--text);
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .main__description {
-    width: 100%;
-    height: 30%;
-    text-align: center;
-    color: var(--text);
-    font-size: 2rem;
-    padding: .5rem;
-    margin-left: .5rem;
-    margin-right: .5rem;
-  }
-  .main__description > p{
-    height: 100%;
-    text-align: center;
-    margin: 1rem;
-  } 
-  
-  .main__button {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .main__button > a {
-    width: 8rem;
-    height: 8rem;
-    border: 6px solid white;
-    background-color: black;
-    padding: 1rem;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 300ms ease-in-out;
-  }
-  .main__button > a:hover{
-    transform: scale(1.1);
-    border: 6px solid var(--text);
-  }
-  
-  .main__button > a > img {
-    width: 5rem;
-  }
-}
-
-
-
-/*////////////////////////////////////////////////////////////////////////////////*/
-@media (min-width: 501px) and (max-width: 1024px) and (orientation: portrait){
-
-  .layout__main {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .main__title {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    color: var(--text);
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-  
-  .main__description {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    color: var(--text);
-    font-size: 2rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-  }
-  .main__description > p{
-    width: 90%;
-    margin: 1rem;
-  }
-  
-  .main__button {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .main__button > a {
-    width: 15rem;
-    height: 15rem;
-    border: 6px solid white;
-    background-color: black;
-    padding: 1rem;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 300ms ease-in-out;
-  }
-  .main__button > a:hover{
-    transform: scale(1.1);
-    border: 6px solid var(--text);
-  }
-  
-  .main__button > a > img {
-    width: 12rem;
-  }
-}
-
-
-
-/*////////////////////////////////////////////////////////////////////////////////*/
-@media (max-width: 600px) and (orientation:landscape) {
-  html {
-    font-size: 10px;
-    /* overflow: hidden; */
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    background-color: var(--fondo);
-  }
-
-  .layout {
-    position: absolute;
-    width: 50rem;
-    height: 50rem;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .layout__main {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .main__title {
-    height: 20%;
-    width: 100%;
-    color: var(--text);
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .main__description {
-    width: 100%;
-    height: 30%;
-    text-align: center;
-    color: var(--text);
-    font-size: 2rem;
-    padding: .5rem;
-    margin-left: .5rem;
-    margin-right: .5rem;
-  }
-  .main__description > p{
-    height: 100%;
-    text-align: center;
-    margin: 1rem;
-  } 
-  
-  .main__button {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .main__button > a {
-    width: 8rem;
-    height: 8rem;
-    border: 6px solid white;
-    background-color: black;
-    padding: 1rem;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 300ms ease-in-out;
-  }
-  .main__button > a:hover{
-    transform: scale(1.1);
-    border: 6px solid var(--text);
-  }
-  
-  .main__button > a > img {
-    width: 5rem;
+    width: 60%;
   }
 }

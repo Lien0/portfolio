@@ -1,54 +1,36 @@
-window.addEventListener("DOMContentLoaded", () => {
-  let loader = document.querySelector(".loader");
-  let layout = document.querySelector(".layout--colaborations");
+import { colaborationsData } from "./data/data.js";
+import { initLoader, initNavigation } from "./utils/utils.js";
 
-  setTimeout(() => {
-    loader.style.display = "none";
-    layout.style.display = "flex";
-  }, 3000);
+/**
+ * Initializes the Colaborations page.
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize common UI components
+  initLoader(".loader", ".layout--colaborations");
+  initNavigation(".layout__nav--colaborations", ".slider__colaborations", "colaborations");
 
-  media();
-  window.addEventListener("resize", () => {
-    media();
-  });
+  // Placeholder for rendering collaborations (if needed)
+  if (colaborationsData.length > 0) {
+    renderColaborations(colaborationsData);
+  } else {
+    console.log("No colaborations available yet.");
+  }
 });
 
-function media() {
-  let nav = document.querySelector(".layout__nav--colaborations");
-  let slider = document.querySelector(".slider__colaborations");
+/**
+ * Renders the collaborations list into the DOM.
+ * @param {Array} data - The array of collaboration objects.
+ */
+function renderColaborations(data) {
+  const container = document.querySelector(".main__content--colaborations");
+  if (!container) return;
 
-  let sc = window.innerWidth;
-  if (sc < 700) {
-    nav.innerHTML =
-      '<i class="fa-solid fa-bars nav__slider" onClick = "showSlideBar()"></i>';
-    slider.style.display = "flex";
-  } else {
-    nav.innerHTML = `
-      <div class="nav__logo">
-          <a href="/">
-            <img src="/assets/icons/liera-icon.jpg" alt="logo" />
-          </a>
-        </div>
-        <div class="nav__items">
-          <ul class="items__list">
-            <li><a href="/assets/pages/information.html">Informacion</a></li>
-            <li><a href="/assets/pages/proyects.html">Proyectos</a></li>
-            <li>
-              <a href="#">Colaboraciones</a>
-            </li>
-          </ul>
-        </div>
-      `;
-    slider.style.display = "none";
-  }
-}
+  const content = data.map(colab => `
+    <article class="colaborations__box">
+      <h2>${colab.title}</h2>
+      <p>${colab.description}</p>
+    </article>
+  `).join('');
 
-function showSlideBar() {
-  let slider = document.querySelector(".slider__colaborations");
-
-  if (slider.style.transform == "") {
-    slider.style.transform = "translateX(80rem)";
-  } else {
-    slider.style.transform = "";
-  }
+  container.innerHTML = content;
 }
