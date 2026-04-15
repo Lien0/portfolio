@@ -66,10 +66,6 @@ export function initNavigation(navSelector, sliderSelector, currentPage = "index
 export function toggleSlider(sliderSelector) {
   const slider = document.querySelector(sliderSelector);
   if (slider) {
-    if (slider.style.transform === "" || slider.style.transform === "translateX(0px)") {
-      slider.style.transform = "translateX(80rem)";
-    } else {
-      slider.style.transform = "translateX(0px)";
-    }
+    slider.classList.toggle("active");
   }
 }
