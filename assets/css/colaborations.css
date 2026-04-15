@@ -48,12 +48,21 @@ body{
   top: 0;
   z-index: 50;
 }
+.nav__logo a{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: black;
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+}
 
 .nav__logo img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  border: 2px solid var(--color-border);
+  width: 60px;
+  height: 50px;
 }
 
 .nav__slider {
@@ -178,7 +187,14 @@ body{
   .items__list a {
     color: var(--color-text-primary);
     text-decoration: none;
+    font-size: var(--font-size-md);
     font-weight: 600;
+    transition: var(--transition-fast);
+  }
+
+  .items__list a:hover {
+    color: var(--color-text-secondary);
+    text-shadow: var(--shadow-glow);
   }
 
   .nav__slider {
